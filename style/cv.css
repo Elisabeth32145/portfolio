@@ -1,0 +1,277 @@
+/* =========================
+   CV GLASS / GLOSSY STYLE
+   ========================= */
+
+/* RESET LOCAL (optionnel si déjà global) */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.back-btn{
+    position:fixed;
+    top:25px;
+    left:25px;
+    z-index:999;
+
+    padding:12px 20px;
+    border-radius:12px;
+
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.15);
+    backdrop-filter:blur(12px);
+
+    color:white;
+    text-decoration:none;
+    font-size:0.9rem;
+
+    transition:0.3s ease;
+}
+
+.back-btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 0 25px rgba(255,120,180,0.25);
+    background:rgba(255,255,255,0.08);
+}
+
+/* BODY (même DA que ton site) */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color:#fff7f3;
+    overflow-x:hidden;
+    background:url('../images/a931b898b94d70c1ac8240eb65ea4bdc.jpg') ;
+}
+
+
+.body::before{
+    content:'';
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,0.45);
+}
+/* CONTAINER CV */
+.cv{
+    max-width:1000px;
+    margin:120px auto;
+    padding:60px 10%;
+    position:relative;
+}
+/* CONTAINER CV */
+.contact{
+    max-width:1000px;
+    margin:120px auto;
+    padding:60px 10%;
+    position:relative;
+}
+
+/* HEADER CV */
+.cv-header{
+    text-align:center;
+    margin-bottom:80px;
+}
+
+.cv-header h1{
+    font-size:3.5rem;
+    letter-spacing:2px;
+    color: #fff7f3;
+    
+}
+
+.cv-header p{
+    margin-top:10px;
+    opacity:0.8;
+}
+
+
+/* SECTIONS */
+.cv-section{
+    margin-bottom:60px;
+    padding:40px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(14px);
+    border-radius:24px;
+    box-shadow:0 0 30px rgba(255,120,180,0.10);
+    transition:0.4s ease;
+}
+.contact-section{
+    margin-bottom:60px;
+    padding:40px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(14px);
+    border-radius:24px;
+    box-shadow:0 0 30px rgba(255,120,180,0.10);
+    transition:0.4s ease;
+}
+
+.cv-section:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 50px rgba(255,120,180,0.18);
+}
+
+.contact-section:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 50px rgba(255,120,180,0.18);
+}
+/* TITRES DE SECTION */
+.cv-section h2{
+    font-size:2rem;
+    margin-bottom:25px;
+    text-transform:uppercase;
+
+    background:linear-gradient(
+        90deg,
+        #ff9fd2,
+        #ffcf8b,
+        #d8a6ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+/* TITRES DE SECTION */
+.contact-section h2{
+    font-size:2rem;
+    margin-bottom:25px;
+    text-transform:uppercase;
+
+    background:linear-gradient(
+        90deg,
+        #ff9fd2,
+        #ffcf8b,
+        #d8a6ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* LISTES */
+.cv-section ul{
+    list-style:none;
+}
+
+.cv-section li{
+    margin-bottom:15px;
+    line-height:1.6;
+    position:relative;
+    padding-left:20px;
+}
+
+.cv-section li::before{
+    content:"•";
+    position:absolute;
+    left:0;
+    color:#ff9fd2;
+}
+
+/* GRIDS (formation / expérience) */
+.cv-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+.cv-card{
+    padding:25px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:20px;
+    backdrop-filter:blur(12px);
+    transition:0.3s ease;
+}
+.contact-card{
+    padding:25px;
+    background:rgba(255,255,255,0.04);
+    border:1px solid rgba(255,255,255,0.12);
+    border-radius:20px;
+    backdrop-filter:blur(12px);
+    transition:0.3s ease;
+}
+
+.cv-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 40px rgba(255,120,180,0.15);
+}
+.contact-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 40px rgba(255,120,180,0.15);
+}
+
+/* NOM / TITRE */
+.cv-name{
+    font-size:4rem;
+    font-weight:bold;
+    text-align:center;
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        90deg,
+        #ff9fd2,
+        #ffcf8b,
+        #d8a6ff
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+/* SOUS-TITRE */
+.cv-subtitle{
+    text-align:center;
+    opacity:0.8;
+    margin-bottom:40px;
+}
+
+/* LOISIRS BLOCS */
+.hobbies{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+
+.hobby{
+    padding:10px 15px;
+    border-radius:999px;
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    font-size:0.9rem;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .cv{
+        padding:40px 5%;
+    }
+
+    .cv-header h1{
+        font-size:2.5rem;
+    }
+
+    .cv-grid{
+        grid-template-columns:1fr;
+    }
+}
+/* RESPONSIVE */
+@media(max-width:768px){
+
+    .contact{
+        padding:40px 5%;
+    }
+
+    .contact-header h1{
+        font-size:2.5rem;
+    }
+
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+}
